@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-app">
+      <div class="quiz-info">
+        <div class="category">
+          <span>Category : <span>HTML</span> </span>
+        </div>
+        <div class="count">Question Count:<span>10</span></div>
+      </div>
+      <div class="quiz-area">
+        <h2>What does HTML stand for?</h2>
+      </div>
+      <div class="answered-area">
+        <div class="answer">
+            <input type="radio" id="answer_1" name="questions" >
+            <label for="answer_1">Hyper Text Markup Language</label>
+        </div>
+        <div class="answer">
+            <input type="radio" id="answer_2" name="questions" >
+            <label for="answer_2">Home Tool Markup Language</label>
+        </div>
+        <div class="answer">
+            <input type="radio" id="answer_3" name="questions" >
+            <label for="answer_3">Hyperlinks and Text Markup Language</label>
+        </div>
+        <div class="answer">
+            <input type="radio" id="answer_4" name="questions" >
+            <label for="answer_4">Hyperlink Tool Markup Language</label>
+        </div>
+
+      </div>
+      <button class="submit-answer">Submit Answer</button>
+      <div class="bullets">
+        <div class="spans">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+        <div class="countdown">
+            <span class="minutes">02</span>:
+            <span class="seconds">45</span>
+
+        </div>
+      </div>
+      <div class="results">
+        <span class="perfect">Perfect</span>
+        you answer 10 question
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
