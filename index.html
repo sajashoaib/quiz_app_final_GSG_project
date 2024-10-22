@@ -80,6 +80,10 @@ function showAlert() {
       popup: 'styled-popup',
       confirmButton: 'styled-button',
     },
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = 'personal_info.html';
+    }
   });
 }
 </script>

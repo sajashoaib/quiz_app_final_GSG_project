@@ -1,11 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .main-header {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ 
+.main-header {
     background-color: #6356e5;
     color: white;
     display: flex;
@@ -175,4 +178,76 @@
   .styled-button:hover {
     background-color: #6356e5 !important;
   }
+
+/*******************/
+
+.user {
+  background-color: #f3f6f6;
+  height: 500px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 440px;
+  text-align: center;
+}
+
+h2 {
+  color: #3a2ade;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #8c82ec;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6356e5;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d6e0e0;
+  border-radius: 8px;
+  background-color: #f3f6f6;
+  transition: all 0.3s;
+}
+
+input:focus {
+  border-color: #8c82ec;
+  background-color: #ffffff;
+  outline: none;
+}
+
+button {
+  background-color: #6356e5;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3a2ade;
+}
 
