@@ -4,8 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>quiz app GsG final project</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    
+  <header class="main-header">
+    <div class="logo">
+      <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
+    </div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-toggle">&#9776;</div>
+  </header>
+
+  <main class="home-content">
+    <h1>Welcome to the Quiz App!</h1>
+    <p>Select your favorite category and challenge yourself with our multiple-choice questions.</p>
+    <div class="categories">
+      <div class="category">
+        <img src="imgs/html.png" alt="HTML Icon" />
+        <span>HTML</span>
+      </div>
+      <div class="category">
+        <img src="imgs/css.png" alt="CSS Icon" />
+        <span>CSS</span>
+      </div>
+      <div class="category">
+        <img src="imgs/javascript.png" alt="JavaScript Icon" />
+        <span>JavaScript</span>
+      </div>
+    </div>
+
+    <button onclick="showAlert()" class="start-btn">Start Quiz</button>
+<script>
+    const categories = document.querySelectorAll('.category');
+  
+    categories.forEach((category) => {
+      category.addEventListener('click', () => {
+        categories.forEach((cat) => cat.classList.remove('selected'));
+        category.classList.add('selected');
+      });
+    });
+  </script>
+<script>
+function showAlert() {
+  Swal.fire({
+    title: '<h2 style="color: #3a2ade; margin-bottom: 10px;">Quiz Instructions</h2>',
+    html: `
+      <ul style="text-align: left; font-size: 18px; line-height: 1.6; color: #6356e5;">
+        <li>Read all questions carefully before answering.</li>
+        <li>You have <strong>10 minutes</strong> to complete the quiz.</li>
+        <li>There is no second attempt unless your score is less than <strong>5</strong>.</li>
+        <li>Do not refresh the page during the quiz.</li>
+        <li>Click the <strong>Submit</strong> button after finishing.</li>
+      </ul>
+      <p><strong>Good Luck</strong></p>
+    `,
+    icon: 'info',
+    confirmButtonText: 'Start Quiz',
+    width: '600px',
+    padding: '30px',
+    background: '#f3f6f6',
+    color: '#3a2ade',
+    confirmButtonColor: '#8c82ec',
+    customClass: {
+      popup: 'styled-popup',
+      confirmButton: 'styled-button',
+    },
+  });
+}
+</script>
+  </main>
 </body>
 </html>
