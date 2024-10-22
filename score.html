@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Results</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="quiz-box">
+      <h1>Quiz Completed!</h1>
+      <div class="score-box">
+        <p>Your Score: <span id="score">0</span>/10</p>
+      </div>
+      <button id="retry-btn" class="retry hidden">Retry</button>
+    </div>
+  </div>
+
+  <script>
+     const score = 4;  
+    document.getElementById('score').textContent = score;
+
+     if (score < 5) {
+      document.getElementById('retry-btn').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

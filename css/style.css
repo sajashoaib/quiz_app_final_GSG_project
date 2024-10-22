@@ -401,3 +401,69 @@ body {
   }
 }
 
+/* ********************************************** style scores page********************************************************* */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 60px auto;
+  }
+  
+  .quiz-box {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    border: 4px solid #6356e5; 
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .quiz-text-completed {
+    font-size: 2.5rem;
+    color: #6356e5;
+    margin-bottom: 20px;
+  }
+  
+  .score-box {
+    background-color: #f1f3f4; 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); 
+  }
+  
+  .score-box p {
+    font-size: 1.5rem;
+    color: #333; 
+  }
+  
+  #score {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #6356e5; 
+  }
+  
+  .retry {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6356e5, #8c82ec); 
+    color: white;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .retry:hover {
+    background: linear-gradient(135deg, #00d4ff, #6356e5); 
+    transform: scale(1.05);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
