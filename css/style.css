@@ -452,6 +452,12 @@ body {
     background-color: #3a2ade;
 }
 
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
 
 /* *************************************************** animation style for all pages ************************************************ */
 
