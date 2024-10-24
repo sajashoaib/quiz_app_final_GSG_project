@@ -56,45 +56,6 @@
         </div>
 
         <button onclick="showAlert()" class="start-btn">Start Quiz</button>
-        <script>
-          const categories = document.querySelectorAll(".category");
-
-          categories.forEach((category) => {
-            category.addEventListener("click", () => {
-              categories.forEach((cat) => cat.classList.remove("selected"));
-              category.classList.add("selected");
-            });
-          });
-        </script>
-        <script>
-          function showAlert() {
-            Swal.fire({
-              title:
-                '<h2 style="color: #3a2ade; margin-bottom: 10px;">Quiz Instructions</h2>',
-              html: `
-      <ul style="text-align: left; font-size: 18px; line-height: 1.6; color: #6356e5;">
-        <li>Read all questions carefully before answering.</li>
-        <li>You have <strong>10 minutes</strong> to complete the quiz.</li>
-        <li>There is no second attempt unless your score is less than <strong>5</strong>.</li>
-        <li>Do not refresh the page during the quiz.</li>
-        <li>Click the <strong>Submit</strong> button after finishing.</li>
-      </ul>
-      <p><strong>Good Luck</strong></p>
-    `,
-              icon: "info",
-              confirmButtonText: "Start Quiz",
-              width: "600px",
-              padding: "30px",
-              background: "#f3f6f6",
-              color: "#3a2ade",
-              confirmButtonColor: "#8c82ec",
-              customClass: {
-                popup: "styled-popup",
-                confirmButton: "styled-button",
-              },
-            });
-          }
-        </script>
       </main>
       <div class="box">
         <div></div>
