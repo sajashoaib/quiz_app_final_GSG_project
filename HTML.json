@@ -9,26 +9,26 @@
   },
   {
     "title": "Which HTML tag is used to define a paragraph?",
-    "answer_1": "<p>",
-    "answer_2": "<h1>",
+    "answer_1": "<h1>",
+    "answer_2": "<p>",
     "answer_3": "<div>",
     "answer_4": "<section>",
     "right_answer": "<p>"
   },
   {
     "title": "What is the correct HTML element for inserting a line break?",
-    "answer_1": "<br>",
+    "answer_1": "<break>",
     "answer_2": "<lb>",
-    "answer_3": "<break>",
+    "answer_3": "<br>",
     "answer_4": "<hr>",
     "right_answer": "<br>"
   },
   {
     "title": "Which element is used to specify a header in HTML?",
-    "answer_1": "<header>",
+    "answer_1": "<top>",
     "answer_2": "<head>",
     "answer_3": "<h1>",
-    "answer_4": "<top>",
+    "answer_4": "<header>",
     "right_answer": "<header>"
   },
   {
@@ -73,9 +73,9 @@
   },
   {
     "title": "Which HTML element is used to specify a navigation link section?",
-    "answer_1": "<nav>",
+    "answer_1": "<ul>",
     "answer_2": "<section>",
-    "answer_3": "<ul>",
+    "answer_3": "<nav>",
     "answer_4": "<div>",
     "right_answer": "<nav>"
   }
