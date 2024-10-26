@@ -1,0 +1,82 @@
+[
+  {
+    "title": "What does HTML stand for?",
+    "answer_1": "Hyper Text Markup Language",
+    "answer_2": "Home Tool Markup Language",
+    "answer_3": "Hyperlinks and Text Markup Language",
+    "answer_4": "Hyperlink Tool Markup Language",
+    "right_answer": "Hyper Text Markup Language"
+  },
+  {
+    "title": "Which HTML tag is used to define a paragraph?",
+    "answer_1": "<p>",
+    "answer_2": "<h1>",
+    "answer_3": "<div>",
+    "answer_4": "<section>",
+    "right_answer": "<p>"
+  },
+  {
+    "title": "What is the correct HTML element for inserting a line break?",
+    "answer_1": "<br>",
+    "answer_2": "<lb>",
+    "answer_3": "<break>",
+    "answer_4": "<hr>",
+    "right_answer": "<br>"
+  },
+  {
+    "title": "Which element is used to specify a header in HTML?",
+    "answer_1": "<header>",
+    "answer_2": "<head>",
+    "answer_3": "<h1>",
+    "answer_4": "<top>",
+    "right_answer": "<header>"
+  },
+  {
+    "title": "Which of the following HTML elements is used to define the footer of a document?",
+    "answer_1": "<footer>",
+    "answer_2": "<bottom>",
+    "answer_3": "<foot>",
+    "answer_4": "<section>",
+    "right_answer": "<footer>"
+  },
+  {
+    "title": "How do you create a hyperlink in HTML?",
+    "answer_1": "<a href='url'>Link</a>",
+    "answer_2": "<link href='url'>Link</link>",
+    "answer_3": "<a name='url'>Link</a>",
+    "answer_4": "<url href='url'>Link</url>",
+    "right_answer": "<a href='url'>Link</a>"
+  },
+  {
+    "title": "Which HTML tag is used to display an image?",
+    "answer_1": "<image>",
+    "answer_2": "<img>",
+    "answer_3": "<pic>",
+    "answer_4": "<src>",
+    "right_answer": "<img>"
+  },
+  {
+    "title": "What is the correct HTML tag for the largest heading?",
+    "answer_1": "<h6>",
+    "answer_2": "<h1>",
+    "answer_3": "<head>",
+    "answer_4": "<heading>",
+    "right_answer": "<h1>"
+  },
+  {
+    "title": "Which attribute is used to provide an alternative text for an image in HTML?",
+    "answer_1": "alt",
+    "answer_2": "src",
+    "answer_3": "href",
+    "answer_4": "title",
+    "right_answer": "alt"
+  },
+  {
+    "title": "Which HTML element is used to specify a navigation link section?",
+    "answer_1": "<nav>",
+    "answer_2": "<section>",
+    "answer_3": "<ul>",
+    "answer_4": "<div>",
+    "right_answer": "<nav>"
+  }
+]

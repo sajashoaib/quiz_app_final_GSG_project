@@ -1,0 +1,82 @@
+[
+  {
+    "title": "What does the DOM stand for in JavaScript?",
+    "answer_1": "Document Object Model",
+    "answer_2": "Display Object Method",
+    "answer_3": "Data Object Manipulation",
+    "answer_4": "Document Over Method",
+    "right_answer": "Document Object Model"
+  },
+  {
+    "title": "Which keyword is used to declare variables in JavaScript?",
+    "answer_1": "dim",
+    "answer_2": "var",
+    "answer_3": "int",
+    "answer_4": "let",
+    "right_answer": "let"
+  },
+  {
+    "title": "Which of the following is NOT a valid way to declare a function in JavaScript?",
+    "answer_1": "function myFunction() {}",
+    "answer_2": "let myFunction = function() {};",
+    "answer_3": "const myFunction = () => {};",
+    "answer_4": "var function = () => {};",
+    "right_answer": "var function = () => {};"
+  },
+  {
+    "title": "Which statement correctly assigns a value to a variable in JavaScript?",
+    "answer_1": "x = 5;",
+    "answer_2": "5 = x;",
+    "answer_3": "var 5 = x;",
+    "answer_4": "set x to 5;",
+    "right_answer": "x = 5;"
+  },
+  {
+    "title": "Which function is used to print content to the console in JavaScript?",
+    "answer_1": "log()",
+    "answer_2": "print()",
+    "answer_3": "display()",
+    "answer_4": "console.log()",
+    "right_answer": "console.log()"
+  },
+  {
+    "title": "Which operator is used for strict equality comparison in JavaScript?",
+    "answer_1": "==",
+    "answer_2": "===",
+    "answer_3": "=",
+    "answer_4": "<",
+    "right_answer": "==="
+  },
+  {
+    "title": "What is the output of: console.log(typeof 42);",
+    "answer_1": "integer",
+    "answer_2": "number",
+    "answer_3": "string",
+    "answer_4": "undefined",
+    "right_answer": "number"
+  },
+  {
+    "title": "Which method is used to add an item to the end of an array in JavaScript?",
+    "answer_1": "append()",
+    "answer_2": "push()",
+    "answer_3": "add()",
+    "answer_4": "insert()",
+    "right_answer": "push()"
+  },
+  {
+    "title": "What is the result of: Boolean('false');",
+    "answer_1": "false",
+    "answer_2": "true",
+    "answer_3": "undefined",
+    "answer_4": "null",
+    "right_answer": "true"
+  },
+  {
+    "title": "Which keyword is used to check for exceptions in JavaScript?",
+    "answer_1": "throw",
+    "answer_2": "try",
+    "answer_3": "catch",
+    "answer_4": "finally",
+    "right_answer": "try"
+  }
+]

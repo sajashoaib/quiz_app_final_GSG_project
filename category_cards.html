@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz app GsG final project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </header>
+    <div class="wrapper">
+      <main class="home-content">
+        <h1>Welcome to the Quiz App!</h1>
+        <p>
+          Select your favorite category and challenge yourself with our
+          multiple-choice questions.
+        </p>
+        <div class="categories">
+          <div class="category" id="category_1">
+            <img src="imgs/html.png" alt="HTML Icon" />
+            <span>HTML</span>
+          </div>
+          <div class="category" id="category_2">
+            <img src="imgs/css.png" alt="CSS Icon" />
+            <span>CSS</span>
+          </div>
+          <div class="category" id="category_3">
+            <img src="imgs/javascript.png" alt="JavaScript Icon" />
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <button class="start-btn">Start Quiz</button>
+      </main>
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
