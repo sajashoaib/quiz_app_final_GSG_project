@@ -214,6 +214,8 @@ function getData(category) {
 
     if (storedQuestions) {
         let questionsArray = JSON.parse(storedQuestions);
+        shuffleArray(questionsArray);
+
         let questionCount = questionsArray.length;
 
         // display the current question
@@ -246,6 +248,14 @@ function getData(category) {
                 handleBullets();
             }
         };
+    }
+}
+
+// ***************************** function that make shuffle for questions *************
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; 
     }
 }
 
@@ -318,7 +328,7 @@ function checkAnswer(rightAnswer, questionNumbers) {
     storeScores(rightAnswers, questionNumbers);
 }
 
-// ******** fuction that store right ansers and number of question in local storge
+// ******** fuction that store right answers and number of question in local storge
 function storeScores(rightAnswers, totalQuestions) {
     localStorage.setItem("rightAnswers", rightAnswers);
     localStorage.setItem("totalQuestions", totalQuestions);
