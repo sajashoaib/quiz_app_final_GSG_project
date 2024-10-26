@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Which property is used to change the background color in CSS?",
+    "answer_1": "color",
+    "answer_2": "background-color",
+    "answer_3": "bg-color",
+    "answer_4": "background",
+    "right_answer": "background-color"
+  },
+  {
+    "title": "How do you make text bold in CSS?",
+    "answer_1": "font-style: bold;",
+    "answer_2": "text-weight: bold;",
+    "answer_3": "font-weight: bold;",
+    "answer_4": "text-style: bold;",
+    "right_answer": "font-weight: bold;"
+  },
+  {
+    "title": "Which property is used to control the font size in CSS?",
+    "answer_1": "font-weight",
+    "answer_2": "font-size",
+    "answer_3": "text-size",
+    "answer_4": "text-font",
+    "right_answer": "font-size"
+  },
+  {
+    "title": "Which of the following is used to define a flex container in CSS?",
+    "answer_1": "display: flex;",
+    "answer_2": "position: flex;",
+    "answer_3": "flex-direction: row;",
+    "answer_4": "align-items: flex;",
+    "right_answer": "display: flex;"
+  },
+  {
+    "title": "What is the default value of the position property in CSS?",
+    "answer_1": "relative",
+    "answer_2": "static",
+    "answer_3": "absolute",
+    "answer_4": "fixed",
+    "right_answer": "static"
+  },
+  {
+    "title": "Which property is used to change the text color in CSS?",
+    "answer_1": "color",
+    "answer_2": "text-color",
+    "answer_3": "font-color",
+    "answer_4": "text-style",
+    "right_answer": "color"
+  },
+  {
+    "title": "How do you add a comment in CSS?",
+    "answer_1": "// this is a comment",
+    "answer_2": "<!-- this is a comment -->",
+    "answer_3": "/* this is a comment */",
+    "answer_4": "// this is a comment */",
+    "right_answer": "/* this is a comment */"
+  },
+  {
+    "title": "Which property is used to change the font in CSS?",
+    "answer_1": "font-family",
+    "answer_2": "font-weight",
+    "answer_3": "font-style",
+    "answer_4": "text-font",
+    "right_answer": "font-family"
+  },
+  {
+    "title": "What is the box model in CSS?",
+    "answer_1": "A model that describes how padding, borders, and margins are calculated around an element",
+    "answer_2": "A method to layout content on the page",
+    "answer_3": "A model for creating CSS grid layouts",
+    "answer_4": "A method for aligning text",
+    "right_answer": "A model that describes how padding, borders, and margins are calculated around an element"
+  }
+]
