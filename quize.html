@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>quiz app GsG final project</title>
@@ -8,104 +9,73 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrapper">
-      <header class="main-header">
-        <div class="logo">
-          <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
+        <header class="main-header">
+            <div class="logo">
+                <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        </header>
+
+        <div class="quiz-app-container">
+            <div class="quiz-app">
+                <div class="quiz-info">
+                    <div class="category-content">
+                        <span>Category : <span class="category-name"></span> </span>
+                    </div>
+                    <div class="count">
+                        Question Count:<span class="count-num"></span>
+                    </div>
+                </div>
+
+                <div class="quiz-area"></div>
+                <div class="answered-area"></div>
+
+                <div class="bullets">
+                    <div class="spans"></div>
+                    <div class="countdown">
+                        <div></div>
+                        <i class="fa-regular fa-clock clock"></i>
+                    </div>
+                </div>
+
+                <div class="results">
+                    <span class="perfect"></span>
+                </div>
+                <div class="submit-answer-container">
+                    <button class="submit-answer">Submit Answer</button>
+                </div>
+            </div>
         </div>
-
-        <nav class="navbar">
-          <ul>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-          </ul>
-        </nav>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      </header>
-
-      <div class="quiz-app-container">
-        <div class="quiz-app">
-          <div class="quiz-info">
-            <div class="category-content">
-              <span>Category : <span class="category-name">HTML</span> </span>
-            </div>
-            <div class="count">
-              Question Count:<span class="count-num"></span>
-            </div>
-          </div>
-          <div class="quiz-area">
-            <!-- <h2>What does HTML stand for?</h2> -->
-          </div>
-          <div class="answered-area">
-            <!-- <div class="answer">
-              <input type="radio" id="answer_1" name="questions" />
-              <label for="answer_1">Hyper Text Markup Language</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="answer_2" name="questions" />
-              <label for="answer_2">Home Tool Markup Language</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="answer_3" name="questions" />
-              <label for="answer_3">Hyperlinks and Text Markup Language</label>
-            </div>
-            <div class="answer">
-              <input type="radio" id="answer_4" name="questions" />
-              <label for="answer_4">Hyperlink Tool Markup Language</label>
-            </div> -->
-          </div>
-
-          <div class="bullets">
-            <div class="spans">
-              <!-- <span class="on"></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span> -->
-            </div>
-            <div class="countdown">
-              <div>
-                <span class="minutes">02</span>:
-                <span class="seconds">45</span>
-              </div>
-              <i class="fa-regular fa-clock clock"></i>
-            </div>
-          </div>
-
-          <div class="results">
-            <span class="perfect"></span>
-          </div>
-          <div class="submit-answer-container">
-            <button class="submit-answer">Submit Answer</button>
-          </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-      </div>
-      <div class="box">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
     </div>
 
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
