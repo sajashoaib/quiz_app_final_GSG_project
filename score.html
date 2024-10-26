@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <div class="wrapper">
       <header class="main-header">
@@ -34,9 +35,10 @@
           <div class="quiz-box">
             <h2 class="quiz-text-completed">Quiz Completed!</h2>
             <div class="score-box">
-              <p>Your Score: <span id="score">0</span>/10</p>
+              <p>Your Score is :<span id="score"></span></p>
+              <p id="resultMessage"></p>
             </div>
-            <button id="retry-btn" class="retry hidden">Retry</button>
+            <button id="retry-btn" class="retry hidden" disabled>Retry</button>
           </div>
         </div>
       </div>
@@ -55,14 +57,6 @@
       </div>
     </div>
 
-    <script>
-      const score = 4;
-      document.getElementById("score").textContent = score;
-
-      if (score < 5) {
-        document.getElementById("retry-btn").classList.remove("hidden");
-      }
-    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
