@@ -150,7 +150,9 @@ function getQuestions(category) {
             }
         }
     };
-        myRequest.open("GET", `../data/${category}.json`, true);
+    
+        myRequest.open("GET", `https://sajashoaib.github.io/quiz_app_final_GSG_project/data/${category}.json`, true);
+
 
     myRequest.send();
 }
