@@ -150,7 +150,8 @@ function getQuestions(category) {
             }
         }
     };
-    myRequest.open("GET", `${category}.json`, true);
+        myRequest.open("GET", `../data/${category}.json`, true);
+
     myRequest.send();
 }
 
