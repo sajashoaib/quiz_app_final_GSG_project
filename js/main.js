@@ -103,7 +103,6 @@ function showAlert() {
 <ul style="text-align: left; font-size: 18px; line-height: 1.6; color: #6356e5;">
 <li>Read all questions carefully before answering.</li>
 <li>You have <strong>10 minutes</strong> to complete the quiz.</li>
-<li>There is no second attempt unless your score is less than <strong>5</strong>.</li>
 <li>Do not refresh the page during the quiz.</li>
 <li>Click the <strong>Submit</strong> button after finishing.</li>
 </ul>
@@ -150,7 +149,7 @@ function getQuestions(category) {
             }
         }
     };
-    
+
         myRequest.open("GET", `https://sajashoaib.github.io/quiz_app_final_GSG_project/data/${category}.json`, true);
 
 
