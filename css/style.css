@@ -1,3 +1,15 @@
+:root{
+ --main-color:  #6356e5;
+ --secoundary-color: #3a2ade;
+ --third-color:#8c82ec;
+ --bad-color:red;
+ --good-color: green;
+ --perfect-color :yellow;
+ --white-color: white;
+ --hover-color: #ffd700;
+
+
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,8 +22,8 @@ body {
 
 /* ************************************************ header and navbar styles *********************************************** */
 .main-header {
-  background-color: #6356e5;
-  color: white;
+  background-color: var(--main-color);
+  color: var(--white-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +48,7 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: white;
+  color: var(--white-color);
   font-size: 18px;
   font-weight: 500;
   position: relative;
@@ -50,12 +62,12 @@ body {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #ffd700;
+  background-color: var(--hover-color);
   transition: width 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #ffd700;
+  color: var(--hover-color);
 }
 
 .navbar a:hover::after {
@@ -66,7 +78,7 @@ body {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  color: white;
+  color: var(--white-color);
 }
 
 /* ***************************************************** home page styles ******************************************************** */
@@ -77,7 +89,7 @@ body {
 
 .home-content h1 {
   font-size: 36px;
-  color: #6356e5;
+  color: var(--main-color);
   margin-bottom: 10px;
 }
 
@@ -110,24 +122,24 @@ body {
   margin-top: 10px;
   font-size: 25px;
   font-weight: 600;
-  color: #6356e5;
+  color: var(--main-color);
 }
 
 .category:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 16px #6356e5;
+  box-shadow: 0 8px 16px var(--main-color);
   border-radius: 10px;
 }
 
 .category.selected {
-  border-color: #6356e5;
-  box-shadow: 0 4px 8px #6356e5;
+  border-color: var(--main-color);
+  box-shadow: 0 4px 8px var(--main-color);
   border-radius: 10px;
 }
 
 .start-btn {
-  background-color: #6356e5;
-  color: white;
+  background-color: var(--main-color);
+  color: var(--white-color);
   border: none;
   padding: 15px 30px;
   font-size: 24px;
@@ -137,7 +149,7 @@ body {
 }
 
 .start-btn:hover {
-  background-color: #5348d6;
+  background-color: var(--main-color);
   transform: scale(1.05);
 }
 
@@ -147,8 +159,8 @@ body {
 }
 
 .styled-button {
-  background-color: #3a2ade !important;
-  color: #ffffff !important;
+  background-color: var(--secoundary-color) ;
+  color: var(--white-color) ;
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 16px;
@@ -156,7 +168,7 @@ body {
 }
 
 .styled-button:hover {
-  background-color: #6356e5 !important;
+  background-color: var(--main-color) ;
 }
 
 /* ************************************************* quize page styles******************************************************* */
@@ -180,13 +192,13 @@ body {
 
 .quiz-info {
   display: flex;
-  background-color: #fff;
+  background-color:var(--white-color);
   padding: 20px;
   justify-content: space-between;
 }
 
 .quiz-area {
-  background-color: #fff;
+  background-color:var(--white-color);
   padding: 20px;
   margin-top: 15px;
 }
@@ -195,7 +207,7 @@ body {
 .count {
   font-size: 18px;
   font-weight: bold;
-  color: #6356e5;
+  color:var(--main-color);
 }
 
 .category-name,
@@ -214,13 +226,13 @@ body {
 
 .answered-area .answer {
   margin: 5px 0;
-  background-color: white;
+  background-color: var(--white-color);
   padding: 20px;
   border-radius: 5px;
 }
 
 .answered-area .answer input[type="Radio"]:checked + label {
-  color: #6356e5;
+  color: var(--main-color);
 }
 
 .answered-area .answer label {
@@ -238,12 +250,12 @@ body {
 }
 
 .submit-answer {
-  background-color: #6356e5;
+  background-color: var(--main-color);
 
   padding: 10px 20px;
   border: none;
   font-weight: bold;
-  color: #fff;
+  color: var(--white-color);
   cursor: pointer;
   border-radius: 8px;
   font-size: 18px;
@@ -255,15 +267,15 @@ body {
 }
 
 .submit-answer:hover {
-  background-color: #ffffff;
-  color: #6356e5;
+  background-color: var(--white-color);
+  color:var(--main-color);
   transition: 0.3s ease-in;
-  border: 2px solid #6356e5;
+  border: 2px solid var(--main-color);
 }
 
 .bullets {
-  background-color: #fff;
-  border-top: 1px solid #fff;
+  background-color:var(--white-color);
+  border-top: 1px solid var(--white-color);
   display: flex;
   padding: 20px;
   margin: 20px 0;
@@ -284,7 +296,7 @@ body {
 }
 
 .quiz-app .bullets .spans span.on {
-  background-color: #6356e5;
+  background-color: var(--main-color);
 }
 
 .results {
@@ -299,7 +311,7 @@ body {
 
 .clock {
   font-size: 20px;
-  color: #6356e5;
+  color:var(--main-color);
 }
 
 /* ********************************************** style scores page********************************************************* */
@@ -313,11 +325,11 @@ body {
 }
 
 .quiz-box {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   padding: 50px;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border: 4px solid #6356e5;
+  border: 4px solid var(--main-color);
   text-align: center;
   max-width: 500px;
   width: 100%;
@@ -325,7 +337,7 @@ body {
 
 .quiz-text-completed {
   font-size: 2.5rem;
-  color: #6356e5;
+  color: var(--main-color);
   margin-bottom: 20px;
 }
 
@@ -345,7 +357,7 @@ body {
 #score {
   font-weight: bold;
   font-size: 2rem;
-  color: #6356e5;
+  color: var(--main-color);
 }
 
 .retry {
@@ -354,13 +366,13 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(135deg, #6356e5, #8c82ec);
-  color: white;
+  background: linear-gradient(135deg,var(--main-color), var(--third-color));
+  color: var(--white-color);
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .retry:hover {
-  background: linear-gradient(135deg, #00d4ff, #6356e5);
+  background: linear-gradient(135deg, #00d4ff, var(--main-color));
   transform: scale(1.05);
 }
 
@@ -375,7 +387,7 @@ body {
 }
 
 .container-person-info {
-  background-color: #ffffff;
+  background-color: var(--white-color);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -384,12 +396,12 @@ body {
 }
 
 .welcome-person {
-  color: #3a2ade;
+  color: var(--secoundary-color);
   margin-bottom: 10px;
 }
 
 .container-person-info p {
-  color: #8c82ec;
+  color:var(--third-color);
   margin-bottom: 20px;
 }
 
@@ -401,7 +413,7 @@ body {
 .user label {
   display: block;
   margin-bottom: 5px;
-  color: #6356e5;
+  color: var(--main-color);
   font-weight: bold;
 }
 
@@ -417,14 +429,14 @@ body {
 
 .user input:focus,
 .user select:focus {
-  border-color: #8c82ec;
-  background-color: #ffffff;
+  border-color: var(--third-color);
+  background-color: var(--white-color);
   outline: none;
 }
 
 .user button {
-  background-color: #6356e5;
-  color: #ffffff;
+  background-color:var(--main-color);
+  color: var(--white-color);
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
@@ -434,11 +446,11 @@ body {
 }
 
 .user button:hover {
-  background-color: #3a2ade;
+  background-color: var(--secoundary-color);
 }
 
 .error {
-  color: red;
+  color:var(--bad-color);
   font-size: 0.9rem;
   margin-top: 5px;
 }
@@ -595,16 +607,16 @@ body {
   }
 }
 .good {
-  color: green;
+  color: var(--good-color);
   font-weight: bold;
 }
 
 .perfect {
-  color: gold;
+  color: var(--perfect-color);
   font-weight: bold;
 }
 
 .bad {
-  color: red;
+  color: var(--bad-color);
   font-weight: bold;
 }
