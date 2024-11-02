@@ -1,14 +1,12 @@
-:root{
- --main-color:  #6356e5;
- --secoundary-color: #3a2ade;
- --third-color:#8c82ec;
- --bad-color:red;
- --good-color: green;
- --perfect-color :yellow;
- --white-color: white;
- --hover-color: #ffd700;
-
-
+:root {
+  --main-color: #6356e5;
+  --secoundary-color: #3a2ade;
+  --third-color: #8c82ec;
+  --bad-color: red;
+  --good-color: green;
+  --perfect-color: yellow;
+  --white-color: white;
+  --hover-color: #ffd700;
 }
 * {
   margin: 0;
@@ -80,6 +78,20 @@ body {
   cursor: pointer;
   color: var(--white-color);
 }
+.profileImageHeader {
+  width: 40px;
+  height: 40px;
+  object-position: center;
+  cursor: pointer;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--white-color);
+}
+.nav-img {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 /* ***************************************************** home page styles ******************************************************** */
 .home-content {
@@ -89,10 +101,20 @@ body {
 
 .home-content h1 {
   font-size: 36px;
-  color: var(--main-color);
-  margin-bottom: 10px;
+  color: var(--white-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: var(--main-color);
+  display: inline-block;
+  padding: 10px 40px;
+  border-left: 10px solid pink;
+  margin-bottom: 30px;
+  transition: 0.3s linear;
 }
 
+.home-content h1:hover {
+  transform: scale(1.1);
+  color: pink;
+}
 .home-content p {
   font-size: 18px;
   color: #333;
@@ -159,8 +181,8 @@ body {
 }
 
 .styled-button {
-  background-color: var(--secoundary-color) ;
-  color: var(--white-color) ;
+  background-color: var(--secoundary-color);
+  color: var(--white-color);
   border-radius: 8px;
   padding: 10px 20px;
   font-size: 16px;
@@ -168,7 +190,7 @@ body {
 }
 
 .styled-button:hover {
-  background-color: var(--main-color) ;
+  background-color: var(--main-color);
 }
 
 /* ************************************************* quize page styles******************************************************* */
@@ -192,13 +214,13 @@ body {
 
 .quiz-info {
   display: flex;
-  background-color:var(--white-color);
+  background-color: var(--white-color);
   padding: 20px;
   justify-content: space-between;
 }
 
 .quiz-area {
-  background-color:var(--white-color);
+  background-color: var(--white-color);
   padding: 20px;
   margin-top: 15px;
 }
@@ -207,7 +229,7 @@ body {
 .count {
   font-size: 18px;
   font-weight: bold;
-  color:var(--main-color);
+  color: var(--main-color);
 }
 
 .category-name,
@@ -268,13 +290,13 @@ body {
 
 .submit-answer:hover {
   background-color: var(--white-color);
-  color:var(--main-color);
+  color: var(--main-color);
   transition: 0.3s ease-in;
   border: 2px solid var(--main-color);
 }
 
 .bullets {
-  background-color:var(--white-color);
+  background-color: var(--white-color);
   border-top: 1px solid var(--white-color);
   display: flex;
   padding: 20px;
@@ -311,7 +333,7 @@ body {
 
 .clock {
   font-size: 20px;
-  color:var(--main-color);
+  color: var(--main-color);
 }
 
 /* ********************************************** style scores page********************************************************* */
@@ -366,7 +388,7 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(135deg,var(--main-color), var(--third-color));
+  background: linear-gradient(135deg, var(--main-color), var(--third-color));
   color: var(--white-color);
   transition: background 0.3s ease, transform 0.3s ease;
 }
@@ -379,8 +401,8 @@ body {
 /* ******************************************************* personal info page style ********************************************* */
 
 .user {
-  height: 500px;
-  margin: 0;
+  height: 550px;
+  margin: 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,6 +415,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 440px;
   text-align: center;
+  height: auto;
 }
 
 .welcome-person {
@@ -401,12 +424,12 @@ body {
 }
 
 .container-person-info p {
-  color:var(--third-color);
+  color: var(--third-color);
   margin-bottom: 20px;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   text-align: left;
 }
 
@@ -435,7 +458,7 @@ body {
 }
 
 .user button {
-  background-color:var(--main-color);
+  background-color: var(--main-color);
   color: var(--white-color);
   padding: 10px 20px;
   border: none;
@@ -443,6 +466,7 @@ body {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
+  margin-bottom: 20px;
 }
 
 .user button:hover {
@@ -450,9 +474,70 @@ body {
 }
 
 .error {
-  color:var(--bad-color);
+  color: var(--bad-color);
   font-size: 0.9rem;
   margin-top: 5px;
+}
+.sign-password-container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 5px 0;*/
+  margin-bottom: 25px;
+}
+.sign-password-container a {
+  text-decoration: none;
+  color: var(--secoundary-color);
+}
+
+.camera-person {
+  position: relative;
+}
+#profileImage {
+  width: 120px;
+  height: 120px;
+  object-position: center;
+  cursor: pointer;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+.camera {
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  padding: 8px;
+  border-radius: 50%;
+  left: 200px;
+  cursor: pointer;
+  width: 45px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1),
+    0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container input {
+  width: 100%;
+  padding-left: 30px; /* Add space on the left for the icon */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 35px; /* Space for the icon */
+}
+
+.email-icon,
+.password-icon,
+.name-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--main-color); /* Icon color */
+  font-size: 18px;
 }
 
 /* *************************************************** animation style for all pages ************************************************ */
@@ -609,14 +694,78 @@ body {
 .good {
   color: var(--good-color);
   font-weight: bold;
+  font-size: 18px;
+
 }
 
 .perfect {
-  color: var(--perfect-color);
+  color: var(--hover-color);
   font-weight: bold;
+  font-size: 18px;
+
 }
 
 .bad {
   color: var(--bad-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
+
+.user-info {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+  padding: 15px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+  z-index: 1;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  width: 220px; 
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.profile-container.active .user-info {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-info p {
+  margin: 8px 0; 
+  color: #333;
+  font-size: 14px;
+  border-bottom: 1px solid #a09f9f;
+  padding: 10px 0;
+}
+
+#logoutBtn {
+  color:var(--main-color); 
+  border: none;
+  padding: 7px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1; 
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#logoutBtn:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+#userEmailinfo,
+#userNameinfo {
+  color: rgb(73, 73, 73);
   font-weight: bold;
 }

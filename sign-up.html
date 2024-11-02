@@ -3,21 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sign in</title>
+    <title>sign up</title>
     <meta
-  name="description"
-  content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
-/>
-<meta
-  name="keywords"
-  content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
-/>
-<meta name="author" content="Gaza Sky Geeks | Palestine" />
-
+    name="description"
+    content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
+  />
+  <meta
+    name="keywords"
+    content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
+  />
+  <meta name="author" content="Gaza Sky Geeks | Palestine" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -47,17 +45,12 @@
           </ul>
           
         </nav>
-        
-         <img
+        <img
         src="imgs/person-create-cv.svg"
         alt="person-icon"
         class="profileImageHeader"
-        id="profileImageHeader"
 
-      />
-     
-     
-           
+      />     
         </div>
     
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
@@ -65,24 +58,53 @@
 
       <main class="user">
         <div class="container-person-info">
-          <h2 class="welcome-person">Sign In</h2>
-          <p>
-            Please enter your details below to start the <strong>quiz!</strong>
-          </p>
-          <form id="sign-in-form">
+          <h2 class="welcome-person">Sign Up</h2>
+
+          <form id="sign-up-form">
+            <div>
+              <div class="camera-person">
+                <img
+                  src="imgs/person-create-cv.svg"
+                  alt="person-icon"
+                  id="profileImage"
+                />
+                <img
+                  src="imgs/Camera.png"
+                  alt="camera-icon"
+                  class="camera shadow"
+                  id="cameraIcon"
+                />
+                <input
+                  type="file"
+                  id="uploadProfileImage"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div class="input-group">
+              <label for="name">Name</label>
+              <div class="input-container">
+                <i class="fa-regular fa-user name-icon"></i>
+                <input type="text" id="name" name="name" placeholder="Name" />
+              </div>
+
+              <div class="error" id="nameError"></div>
+            </div>
+
             <div class="input-group">
               <label for="email">Email</label>
               <div class="input-container">
                 <i class="fa-regular fa-envelope email-icon"></i>
+
                 <input
                   type="email"
-                  id="email"
+                  id="email-sign-up"
                   name="email"
                   placeholder="Email"
                 />
               </div>
-
-              <div class="error" id="emailError"></div>
+              <div class="error" id="emailErrorSignUp"></div>
             </div>
 
             <div class="input-group">
@@ -91,22 +113,16 @@
                 <i class="fa-solid fa-lock password-icon"></i>
                 <input
                   type="password"
-                  id="password"
+                  id="password-sign-up"
                   name="password"
                   placeholder="Password"
                 />
               </div>
 
-              <div class="error" id="passwordError"></div>
+              <div class="error" id="passwordErrorSignUp"></div>
             </div>
 
-            <div class="sign-password-container">
-              <a href="forget_password.html">Forget Password?</a>
-            </div>
-            <button type="submit" id="submitBtn">Start Quiz</button>
-            <div>
-              <p>Dont have an account? <a href="sign-up.html">Sign Up</a></p>
-            </div>
+            <button type="submit" id="sign-up-btn">Sign Up</button>
           </form>
         </div>
       </main>
