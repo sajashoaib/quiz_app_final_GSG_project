@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Results</title>
+    <meta
+      name="description"
+      content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
+    />
+    <meta
+      name="keywords"
+      content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
+    />
+    <meta name="author" content="Gaza Sky Geeks | Palestine" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz Results</title>
-  <meta
-  name="description"
-  content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
-/>
-<meta
-  name="keywords"
-  content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
-/>
-<meta name="author" content="Gaza Sky Geeks | Palestine" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Mada:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <div class="wrapper">
+      <header class="main-header">
+        <div class="logo">
+          <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
+        </div>
 
-<body>
-  <div class="wrapper">
-    <header class="main-header">
-      <div class="logo">
-        <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
-      </div>
-  
-      <div class="nav-img">
-         <nav class="navbar">
-        <ul>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-        </ul>
-        
-      </nav>
-      <div class="profile-container">
-        <img
-        src="imgs/person-create-cv.svg"
-        alt="person-icon"
-        id="profileImageHeader"
-        class="profileImageHeader"
-      />    
-      <div class="user-info">
-        <p>Name: <span id="userNameinfo"></span></p>
-        <p>Email: <span id="userEmailinfo"></span></p>
-        <a  href="index.html" id="logoutBtn">  
-           Logout &nbsp;
-           <i class="fas fa-sign-out-alt "></i>
-         </a>
-      </div>    
-        </div>  
-      </div>
-  
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    </header>
-    <div>
-      <div class="container">
-        <div class="quiz-box">
-          <h2 class="quiz-text-completed">Quiz Completed!</h2>
-          <div class="score-box">
-            <p>Your Score is :<span id="score"></span></p>
-            <p id="resultMessage"></p>
+        <div class="nav-img">
+          <nav class="navbar">
+            <ul>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li>
+                <div class="profile-container">
+                  <div class="small-screen-img-name">
+                    <img
+                      src="imgs/person-create-cv.svg"
+                      alt="person-icon"
+                      id="profileImageHeader"
+                      class="profileImageHeader"
+                    />
+                    <p
+                      id="smallprofileNameHeader"
+                      class="profileNameHeader"
+                    ></p>
+                  </div>
+
+                  <div class="user-info">
+                    <p>Name: <span id="userNameinfo"></span></p>
+                    <p>Email: <span id="userEmailinfo"></span></p>
+                    <a href="index.html" id="logoutBtn">
+                      Logout &nbsp;
+                      <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      </header>
+      <div>
+        <div class="container">
+          <div class="quiz-box">
+            <h2 class="quiz-text-completed">Quiz Completed!</h2>
+            <div class="score-box">
+              <p>Your Score is :<span id="score"></span></p>
+              <p id="resultMessage"></p>
+            </div>
+            <button id="retry-btn" class="retry hidden" disabled>Retry</button>
           </div>
-          <button id="retry-btn" class="retry hidden" disabled>Retry</button>
         </div>
       </div>
+
+      <div class="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </div>
 
-    <div class="box">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-
-  <script src="js/main.js"></script>
-  <script src="https://unpkg.com/cloudinary-core/cloudinary-core.min.js"></script>
-
-</body>
-
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/cloudinary-core/cloudinary-core.min.js"></script>
+  </body>
 </html>

@@ -42,6 +42,7 @@ body {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .navbar a {
@@ -92,8 +93,18 @@ body {
   align-items: center;
   gap: 20px;
 }
+.small-screen-img-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#smallprofileNameHeader {
+  display: none;
+  color: var(--main-color);
+  font-weight: bold;
+}
 
-/* ***************************************************** home page styles ******************************************************** */
+/* ***************************************************** category cards styles ******************************************************** */
 .home-content {
   text-align: center;
   margin-top: 80px;
@@ -273,7 +284,6 @@ body {
 
 .submit-answer {
   background-color: var(--main-color);
-
   padding: 10px 20px;
   border: none;
   font-weight: bold;
@@ -397,8 +407,25 @@ body {
   background: linear-gradient(135deg, #00d4ff, var(--main-color));
   transform: scale(1.05);
 }
+.good {
+  color: var(--good-color);
+  font-weight: bold;
+  font-size: 18px;
+}
 
-/* ******************************************************* personal info page style ********************************************* */
+.perfect {
+  color: var(--hover-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bad {
+  color: var(--bad-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ******************************************************* index , sign up and forget password pages style ********************************************* */
 
 .user {
   height: 550px;
@@ -481,7 +508,6 @@ body {
 .sign-password-container {
   display: flex;
   justify-content: space-between;
-  /* padding: 5px 0;*/
   margin-bottom: 25px;
 }
 .sign-password-container a {
@@ -521,12 +547,12 @@ body {
 
 .input-container input {
   width: 100%;
-  padding-left: 30px; /* Add space on the left for the icon */
+  padding-left: 30px;
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding-left: 35px; /* Space for the icon */
+  padding-left: 35px;
 }
 
 .email-icon,
@@ -536,8 +562,65 @@ body {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: var(--main-color); /* Icon color */
+  color: var(--main-color);
   font-size: 18px;
+}
+/* ******************************************************* user info card style ********************************************* */
+
+.user-info {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+  width: 220px;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.profile-container.active .user-info {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.user-info p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 14px;
+  border-bottom: 1px solid #a09f9f;
+  padding: 10px 0;
+}
+
+#logoutBtn {
+  color: var(--main-color);
+  border: none;
+  padding: 7px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+#logoutBtn:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+#userEmailinfo,
+#userNameinfo {
+  color: rgb(73, 73, 73);
+  font-weight: bold;
 }
 
 /* *************************************************** animation style for all pages ************************************************ */
@@ -653,6 +736,9 @@ body {
     padding: 10px;
     transition: transform 0.4s ease, opacity 0.4s ease;
     opacity: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1000;
   }
 
   .navbar ul li a {
@@ -690,82 +776,21 @@ body {
   .countdown .clock {
     display: none;
   }
-}
-.good {
-  color: var(--good-color);
-  font-weight: bold;
-  font-size: 18px;
-
-}
-
-.perfect {
-  color: var(--hover-color);
-  font-weight: bold;
-  font-size: 18px;
-
-}
-
-.bad {
-  color: var(--bad-color);
-  font-weight: bold;
-  font-size: 18px;
-}
-
-
-
-
-.user-info {
-  display: none;
-  position: absolute;
-  top: 120%;
-  right: 0;
-  background-color: #f9f9f9; 
-  border-radius: 10px; 
-  padding: 15px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
-  z-index: 1;
-  transition: opacity 0.3s ease-in, transform 0.3s ease-in;
-  width: 220px; 
-  opacity: 0;
-  transform: translateY(-10px);
-}
-
-.profile-container.active .user-info {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.user-info p {
-  margin: 8px 0; 
-  color: #333;
-  font-size: 14px;
-  border-bottom: 1px solid #a09f9f;
-  padding: 10px 0;
-}
-
-#logoutBtn {
-  color:var(--main-color); 
-  border: none;
-  padding: 7px 10px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f1f1f1; 
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-#logoutBtn:hover {
-  background-color: var(--main-color);
-  color: #fff;
-}
-
-#userEmailinfo,
-#userNameinfo {
-  color: rgb(73, 73, 73);
-  font-weight: bold;
+  .user-info {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+    width: 220px;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  #smallprofileNameHeader {
+    display: block;
+  }
 }

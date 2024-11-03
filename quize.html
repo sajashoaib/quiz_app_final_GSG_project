@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>questions</title>
     <meta
-    name="description"
-    content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
-  />
-  <meta
-    name="keywords"
-    content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
-  />
-  <meta name="author" content="Gaza Sky Geeks | Palestine" />
+      name="description"
+      content="Challenge yourself with fun and interactive quizzes on various topics, test your knowledge, and learn new facts with our quiz app!"
+    />
+    <meta
+      name="keywords"
+      content="quiz app, online quizzes, trivia, knowledge test, fun quiz, educational games, challenge, learning, quiz game, interactive questions"
+    />
+    <meta name="author" content="Gaza Sky Geeks | Palestine" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,35 +29,42 @@
         <div class="logo">
           <img src="imgs/quiz.png" alt="Quiz Logo" width="230" height="110" />
         </div>
-    
+
         <div class="nav-img">
-           <nav class="navbar">
-          <ul>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">CSS</a></li>
-            <li><a href="#">JavaScript</a></li>
-          </ul>
-          
-        </nav>
-        <div class="profile-container">
-        <img
-        src="imgs/person-create-cv.svg"
-        alt="person-icon"
-        id="profileImageHeader"
-        class="profileImageHeader"
-      />    
-      <div class="user-info">
-        <p>Name: <span id="userNameinfo"></span></p>
-        <p>Email: <span id="userEmailinfo"></span></p>
-        <a  href="index.html" id="logoutBtn">  
-           Logout &nbsp;
-           <i class="fas fa-sign-out-alt"></i>
-         </a>
-      </div>    
+          <nav class="navbar">
+            <ul>
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li>
+                <div class="profile-container">
+                  <div class="small-screen-img-name">
+                    <img
+                      src="imgs/person-create-cv.svg"
+                      alt="person-icon"
+                      id="profileImageHeader"
+                      class="profileImageHeader"
+                    />
+                    <p
+                      id="smallprofileNameHeader"
+                      class="profileNameHeader"
+                    ></p>
+                  </div>
+
+                  <div class="user-info">
+                    <p>Name: <span id="userNameinfo"></span></p>
+                    <p>Email: <span id="userEmailinfo"></span></p>
+                    <a href="index.html" id="logoutBtn">
+                      Logout &nbsp;
+                      <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
         </div>
-       
-        </div>
-    
+
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       </header>
 
@@ -107,6 +114,5 @@
 
     <script src="js/main.js"></script>
     <script src="https://unpkg.com/cloudinary-core/cloudinary-core.min.js"></script>
-
   </body>
 </html>

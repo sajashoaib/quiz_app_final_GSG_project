@@ -8,18 +8,28 @@ const emailInput = document.getElementById("email");
 const emailInputSignUp = document.getElementById("email-sign-up");
 const passwordInputSignUp = document.getElementById("password-sign-up");
 const emailInputEditPassword = document.getElementById("email-forget-password");
-const passwordInputEditPassword = document.getElementById("password-forget-password");
-const confirmpasswordInputEditPassword = document.getElementById("confirmpassword-forget-password");
+const passwordInputEditPassword = document.getElementById(
+  "password-forget-password"
+);
+const confirmpasswordInputEditPassword = document.getElementById(
+  "confirmpassword-forget-password"
+);
 const emailError = document.getElementById("emailError");
 const nameError = document.getElementById("nameError");
 const passwordError = document.getElementById("passwordError");
 const emailErrorSignUp = document.getElementById("emailErrorSignUp");
 const passwordErrorSignUp = document.getElementById("passwordErrorSignUp");
-const emailErrorForgetPassword = document.getElementById("emailErrorForgetPassword");
-const passwordErrorForgetPassword = document.getElementById("passwordErrorForgetPassword");
-const confirmpasswordErrorForgetPassword = document.getElementById("confirmpasswordErrorForget");
-const sign_in_form = document.getElementById('sign-in-form');
-const sign_up_form = document.getElementById('sign-up-form');
+const emailErrorForgetPassword = document.getElementById(
+  "emailErrorForgetPassword"
+);
+const passwordErrorForgetPassword = document.getElementById(
+  "passwordErrorForgetPassword"
+);
+const confirmpasswordErrorForgetPassword = document.getElementById(
+  "confirmpasswordErrorForget"
+);
+const sign_in_form = document.getElementById("sign-in-form");
+const sign_up_form = document.getElementById("sign-up-form");
 const edit_password_form = document.getElementById("edit-password-form");
 let quizArea = document.querySelector(".quiz-area");
 let answeredArea = document.querySelector(".answered-area");
@@ -34,12 +44,15 @@ let countDown = document.querySelector(".countdown div");
 let retrybtn = document.getElementById("retry-btn");
 const submitanswer = document.querySelector(".submit-answer");
 const cameraIcon = document.getElementById("cameraIcon");
-const profileImageHeader = document.getElementById('profileImageHeader');
+const profileImageHeader = document.getElementById("profileImageHeader");
 const uploadProfileImage = document.getElementById("uploadProfileImage");
-const name_user = document.getElementById('name-user');
+const name_user = document.getElementById("name-user");
 const userNameinfo = document.getElementById("userNameinfo");
 const userEmailinfo = document.getElementById("userEmailinfo");
 const logoutBtn = document.getElementById("logoutBtn");
+const smallprofileNameHeader = document.getElementById(
+  "smallprofileNameHeader"
+);
 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordPattern = /^.{6,}$/;
 let questions = {};
@@ -76,75 +89,72 @@ categories.forEach((category) => {
 
 // ***************** validation for sign in form ***********************************
 
-
 if (sign_in_form) {
-  
-    sign_in_form.addEventListener("submit", (e) => {
-        e.preventDefault();
-    
-        emailError.textContent = "";
-        passwordError.textContent = "";
-        let isValid = true;
+  sign_in_form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-        // التحقق من صحة البريد الإلكتروني
-        if (emailInput.value.trim() === "") {
-            emailError.textContent = "Please enter your email.";
-            isValid = false;
-        } else if (!emailPattern.test(emailInput.value)) {
-            emailError.textContent = "Please enter a valid email address.";
-            isValid = false;
-        }
+    emailError.textContent = "";
+    passwordError.textContent = "";
+    let isValid = true;
 
-        // التحقق من صحة كلمة المرور
-        if (passwordInput.value.trim() === "") {
-            passwordError.textContent = "Please enter your password.";
-            isValid = false;
-        } else if (!passwordPattern.test(passwordInput.value)) {
-            passwordError.textContent = "Password must be at least 6 characters";
-            isValid = false;
-        }
+    // التحقق من صحة البريد الإلكتروني
+    if (emailInput.value.trim() === "") {
+      emailError.textContent = "Please enter your email.";
+      isValid = false;
+    } else if (!emailPattern.test(emailInput.value)) {
+      emailError.textContent = "Please enter a valid email address.";
+      isValid = false;
+    }
 
-        if (isValid) {
-            const email = emailInput.value.trim();
-            const password = passwordInput.value.trim();
-            const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    // التحقق من صحة كلمة المرور
+    if (passwordInput.value.trim() === "") {
+      passwordError.textContent = "Please enter your password.";
+      isValid = false;
+    } else if (!passwordPattern.test(passwordInput.value)) {
+      passwordError.textContent = "Password must be at least 6 characters";
+      isValid = false;
+    }
 
-            // التحقق من وجود المستخدم في LocalStorage
-            const user = existingUsers.find((user) => user.email === email);
+    if (isValid) {
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+      const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-            if (!user) {
-                // إذا لم يكن المستخدم موجودًا
-                Swal.fire({
-                    icon: "info",
-                    title: "Registration Required",
-                    text: "Please sign up first",
-                    confirmButtonText: "OK",
-                });
-            } else if (user.password !== password) {
-                // إذا كانت كلمة المرور غير مطابقة
-                Swal.fire({
-                    icon: "error",
-                    title: "Incorrect Password",
-                    text: "The password you entered is incorrect. Please try again.",
-                    confirmButtonText: "OK",
-                });
-            } else {
-                // إذا كان البريد الإلكتروني وكلمة المرور صحيحين
-                Swal.fire({
-                    icon: "success",
-                    title: "Welcome!",
-                    text: "Login successful.",
-                    confirmButtonText: "OK",
-                }).then(() => {
-                    emailInput.value = "";
-                    passwordInput.value = "";
-                    window.location.href = "category_cards.html";
-                });
-            }
-        }
-    });
+      // التحقق من وجود المستخدم في LocalStorage
+      const user = existingUsers.find((user) => user.email === email);
+
+      if (!user) {
+        // إذا لم يكن المستخدم موجودًا
+        Swal.fire({
+          icon: "info",
+          title: "Registration Required",
+          text: "Please sign up first",
+          confirmButtonText: "OK",
+        });
+      } else if (user.password !== password) {
+        // إذا كانت كلمة المرور غير مطابقة
+        Swal.fire({
+          icon: "error",
+          title: "Incorrect Password",
+          text: "The password you entered is incorrect. Please try again.",
+          confirmButtonText: "OK",
+        });
+      } else {
+        // إذا كان البريد الإلكتروني وكلمة المرور صحيحين
+        Swal.fire({
+          icon: "success",
+          title: "Welcome!",
+          text: "Login successful.",
+          confirmButtonText: "OK",
+        }).then(() => {
+          emailInput.value = "";
+          passwordInput.value = "";
+          window.location.href = "category_cards.html";
+        });
+      }
+    }
+  });
 }
-
 
 // ***************** logic of upload image ***********************************
 if (cameraIcon) {
@@ -158,7 +168,7 @@ if (uploadProfileImage) {
     if (file) {
       const reader = new FileReader();
       reader.onload = function (e) {
-        profileImageData = e.target.result; 
+        profileImageData = e.target.result;
         document.getElementById("profileImage").src = profileImageData;
         localStorage.setItem("profileImageData", profileImageData);
       };
@@ -171,113 +181,114 @@ if (uploadProfileImage) {
 
 if (sign_up_form) {
   sign_up_form.addEventListener("submit", (e) => {
-      e.preventDefault();
+    e.preventDefault();
 
-      emailErrorSignUp.textContent = "";
-      passwordErrorSignUp.textContent = "";
-      nameError.textContent = "";
-      let isValid = true;
+    emailErrorSignUp.textContent = "";
+    passwordErrorSignUp.textContent = "";
+    nameError.textContent = "";
+    let isValid = true;
 
-      if (nameInput.value.trim() === "") {
-          nameError.textContent = "Please enter your name.";
-          isValid = false;
-      }
+    if (nameInput.value.trim() === "") {
+      nameError.textContent = "Please enter your name.";
+      isValid = false;
+    }
 
-      if (emailInputSignUp.value.trim() === "") {
-          emailErrorSignUp.textContent = "Please enter your email.";
-          isValid = false;
-      } else if (!emailPattern.test(emailInputSignUp.value)) {
-          emailErrorSignUp.textContent = "Please enter a valid email address.";
-          isValid = false;
-      }
+    if (emailInputSignUp.value.trim() === "") {
+      emailErrorSignUp.textContent = "Please enter your email.";
+      isValid = false;
+    } else if (!emailPattern.test(emailInputSignUp.value)) {
+      emailErrorSignUp.textContent = "Please enter a valid email address.";
+      isValid = false;
+    }
 
-      if (passwordInputSignUp.value.trim() === "") {
-          passwordErrorSignUp.textContent = "Please enter your password.";
-          isValid = false;
-      } else if (!passwordPattern.test(passwordInputSignUp.value)) {
-          passwordErrorSignUp.textContent = "Password must be at least 6 characters";
-          isValid = false;
-      }
+    if (passwordInputSignUp.value.trim() === "") {
+      passwordErrorSignUp.textContent = "Please enter your password.";
+      isValid = false;
+    } else if (!passwordPattern.test(passwordInputSignUp.value)) {
+      passwordErrorSignUp.textContent =
+        "Password must be at least 6 characters";
+      isValid = false;
+    }
 
-      if (isValid) {
-          const name = nameInput.value.trim();
-          const email = emailInputSignUp.value.trim();
-          const password = passwordInputSignUp.value.trim();
-          const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-          const user = existingUsers.find((user) => user.email === email);
+    if (isValid) {
+      const name = nameInput.value.trim();
+      const email = emailInputSignUp.value.trim();
+      const password = passwordInputSignUp.value.trim();
+      const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+      const user = existingUsers.find((user) => user.email === email);
 
-          if (user) {
+      if (user) {
+        Swal.fire({
+          icon: "warning",
+          title: "User Already Exists",
+          text: "You are already registered. Please log in.",
+          confirmButtonText: "OK",
+        });
+      } else {
+        // upload images to cloudinary becouse the size of images
+        if (uploadProfileImage.files.length > 0) {
+          const file = uploadProfileImage.files[0];
+          const formData = new FormData();
+          formData.append("file", file);
+          formData.append("upload_preset", "images"); // upload preset Cloudinary
+
+          fetch("https://api.cloudinary.com/v1_1/dmmmksqmh/image/upload", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              const newUser = {
+                name,
+                email,
+                password,
+                profileImage: data.secure_url,
+              };
+              existingUsers.push(newUser);
+              localStorage.setItem("loggedInUserEmail", email);
+              localStorage.setItem("users", JSON.stringify(existingUsers));
+
               Swal.fire({
-                  icon: "warning",
-                  title: "User Already Exists",
-                  text: "You are already registered. Please log in.",
-                  confirmButtonText: "OK",
+                icon: "success",
+                title: "Registration Successful",
+                text: "Your account has been created. Please log in.",
+                confirmButtonText: "OK",
+              }).then(() => {
+                nameInput.value = "";
+                emailInputSignUp.value = "";
+                passwordInputSignUp.value = "";
+                window.location.href = "index.html";
               });
-          } else {
-              // upload images to cloudinary becouse the size of images
-              if (uploadProfileImage.files.length > 0) {
-                  const file = uploadProfileImage.files[0];
-                  const formData = new FormData();
-                  formData.append("file", file);
-                  formData.append("upload_preset", "images"); // upload preset Cloudinary
+            })
+            .catch((error) => {
+              console.error("Error uploading to Cloudinary:", error);
+            });
+        } else {
+          // when user doesnt upload image appear the default image
+          const newUser = {
+            name,
+            email,
+            password,
+            profileImage: defaultProfileImage,
+          };
+          existingUsers.push(newUser);
+          localStorage.setItem("loggedInUserEmail", email);
+          localStorage.setItem("users", JSON.stringify(existingUsers));
 
-                  fetch("https://api.cloudinary.com/v1_1/dmmmksqmh/image/upload", {
-                      method: "POST",
-                      body: formData
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                      const newUser = {
-                          name,
-                          email,
-                          password,
-                          profileImage: data.secure_url 
-                      };
-                      existingUsers.push(newUser);
-                      localStorage.setItem("loggedInUserEmail", email);
-                      localStorage.setItem("users", JSON.stringify(existingUsers));
-
-                      Swal.fire({
-                          icon: "success",
-                          title: "Registration Successful",
-                          text: "Your account has been created. Please log in.",
-                          confirmButtonText: "OK",
-                      }).then(() => {
-                          nameInput.value = "";
-                          emailInputSignUp.value = "";
-                          passwordInputSignUp.value = "";
-                          window.location.href = "index.html";
-                      });
-                  })
-                  .catch(error => {
-                      console.error("Error uploading to Cloudinary:", error);
-                  });
-              } else {
-                  // when user doesnt upload image appear the default image
-                  const newUser = {
-                      name,
-                      email,
-                      password,
-                      profileImage: defaultProfileImage
-                  };
-                  existingUsers.push(newUser);
-                  localStorage.setItem("loggedInUserEmail", email);
-                  localStorage.setItem("users", JSON.stringify(existingUsers));
-
-                  Swal.fire({
-                      icon: "success",
-                      title: "Registration Successful",
-                      text: "Your account has been created. Please log in.",
-                      confirmButtonText: "OK",
-                  }).then(() => {
-                      nameInput.value = "";
-                      emailInputSignUp.value = "";
-                      passwordInputSignUp.value = "";
-                      window.location.href = "index.html";
-                  });
-              }
-          }
+          Swal.fire({
+            icon: "success",
+            title: "Registration Successful",
+            text: "Your account has been created. Please log in.",
+            confirmButtonText: "OK",
+          }).then(() => {
+            nameInput.value = "";
+            emailInputSignUp.value = "";
+            passwordInputSignUp.value = "";
+            window.location.href = "index.html";
+          });
+        }
       }
+    }
   });
 }
 
@@ -285,33 +296,33 @@ if (sign_up_form) {
 
 const loggedInUserEmail = localStorage.getItem("loggedInUserEmail");
 const savedUsers = JSON.parse(localStorage.getItem("users")) || [];
-const currentUser = savedUsers.find(user => user.email === loggedInUserEmail);
-const allowedPages = ['/category_cards.html', '/score.html', '/quize.html'];
+const currentUser = savedUsers.find((user) => user.email === loggedInUserEmail);
+const allowedPages = ["/category_cards.html", "/score.html", "/quize.html"];
 
-if (currentUser  && allowedPages.includes(window.location.pathname)) {
+if (currentUser && allowedPages.includes(window.location.pathname)) {
   if (profileImageHeader) {
-      profileImageHeader.src = currentUser.profileImage || defaultProfileImage;
-      profileImageHeader.addEventListener("click", function () {
-        const profileContainer = this.closest(".profile-container");
-        profileContainer.classList.toggle("active"); // يبدل بين عرض وإخفاء div
-        if(userNameinfo){
-          userNameinfo.textContent = currentUser.name;
-      
-        }
-        if(userEmailinfo){
-          userEmailinfo.textContent = currentUser.email;
-      
-        }
-      });
+    profileImageHeader.src = currentUser.profileImage || defaultProfileImage;
+    profileImageHeader.addEventListener("click", function () {
+      const profileContainer = this.closest(".profile-container");
+      profileContainer.classList.toggle("active"); // يبدل بين عرض وإخفاء div
+      if (userNameinfo) {
+        userNameinfo.textContent = currentUser.name;
+      }
+      if (userEmailinfo) {
+        userEmailinfo.textContent = currentUser.email;
+      }
+    });
   }
-  if(name_user){
+  if (name_user) {
     name_user.textContent = currentUser.name;
-
+  }
+  if (smallprofileNameHeader) {
+    smallprofileNameHeader.textContent = currentUser.name;
   }
 } else {
   console.log("User not found.");
   if (profileImageHeader) {
-      profileImageHeader.src = defaultProfileImage; 
+    profileImageHeader.src = defaultProfileImage;
   }
 }
 
@@ -319,51 +330,54 @@ if (logoutBtn) {
   logoutBtn.addEventListener("click", function () {
     window.location.href = "index.html";
     if (userNameinfo) {
-      userNameinfo.textContent = '';
+      userNameinfo.textContent = "";
     }
     if (userEmailinfo) {
-      userEmailinfo.textContent = '';
+      userEmailinfo.textContent = "";
     }
-
-    
   });
 }
 
-
 // ***************** validation for edit password form ***********************************
 if (edit_password_form) {
-  
   edit_password_form.addEventListener("submit", (e) => {
-      e.preventDefault();
-  
-      emailErrorForgetPassword.textContent = "";
-      passwordErrorForgetPassword.textContent = "";
-      confirmpasswordErrorForgetPassword.textContent="";
+    e.preventDefault();
 
-      let isValid = true;
+    emailErrorForgetPassword.textContent = "";
+    passwordErrorForgetPassword.textContent = "";
+    confirmpasswordErrorForgetPassword.textContent = "";
 
-      if (emailInputEditPassword.value.trim() === "") {
-          emailErrorForgetPassword.textContent = "Please enter your email.";
-          isValid = false;
-      } else if (!emailPattern.test(emailInputEditPassword.value)) {
-          emailErrorForgetPassword.textContent = "Please enter a valid email address.";
-          isValid = false;
-      }
+    let isValid = true;
 
-      if (passwordInputEditPassword.value.trim() === "") {
-          passwordErrorForgetPassword.textContent = "Please enter your password.";
-          isValid = false;
-      } else if (!passwordPattern.test(passwordInputEditPassword.value)) {
-          passwordErrorForgetPassword.textContent = "Password must be at least 6 characters";
-          isValid = false;
-      }
+    if (emailInputEditPassword.value.trim() === "") {
+      emailErrorForgetPassword.textContent = "Please enter your email.";
+      isValid = false;
+    } else if (!emailPattern.test(emailInputEditPassword.value)) {
+      emailErrorForgetPassword.textContent =
+        "Please enter a valid email address.";
+      isValid = false;
+    }
 
-       if (confirmpasswordInputEditPassword.value.trim() === "") {
-        confirmpasswordErrorForgetPassword.textContent = "Please confirm your password.";
-        isValid = false;
-    } else if (confirmpasswordInputEditPassword.value.trim() !== passwordInputEditPassword.value.trim()) {
-      confirmpasswordErrorForgetPassword.textContent = "Passwords do not match.";
-        isValid = false;
+    if (passwordInputEditPassword.value.trim() === "") {
+      passwordErrorForgetPassword.textContent = "Please enter your password.";
+      isValid = false;
+    } else if (!passwordPattern.test(passwordInputEditPassword.value)) {
+      passwordErrorForgetPassword.textContent =
+        "Password must be at least 6 characters";
+      isValid = false;
+    }
+
+    if (confirmpasswordInputEditPassword.value.trim() === "") {
+      confirmpasswordErrorForgetPassword.textContent =
+        "Please confirm your password.";
+      isValid = false;
+    } else if (
+      confirmpasswordInputEditPassword.value.trim() !==
+      passwordInputEditPassword.value.trim()
+    ) {
+      confirmpasswordErrorForgetPassword.textContent =
+        "Passwords do not match.";
+      isValid = false;
     }
 
     if (isValid) {
@@ -373,31 +387,30 @@ if (edit_password_form) {
       const userIndex = existingUsers.findIndex((user) => user.email === email);
 
       if (userIndex === -1) {
-          Swal.fire({
-              icon: "info",
-              title: "User Not Found",
-              text: "No account found with this email. Please sign up first.",
-              confirmButtonText: "OK",
-          });
+        Swal.fire({
+          icon: "info",
+          title: "User Not Found",
+          text: "No account found with this email. Please sign up first.",
+          confirmButtonText: "OK",
+        });
       } else {
-          existingUsers[userIndex].password = newPassword;
-          localStorage.setItem("users", JSON.stringify(existingUsers));
-          Swal.fire({
-              icon: "success",
-              title: "Password Updated",
-              text: "Your password has been successfully updated.",
-              confirmButtonText: "OK",
-          }).then(() => {
-              emailInputEditPassword.value = "";
-              passwordInputEditPassword.value = "";
-              confirmpasswordInputEditPassword.value = "";
-              window.location.href = "index.html"; // الانتقال إلى صفحة تسجيل الدخول
-          });
+        existingUsers[userIndex].password = newPassword;
+        localStorage.setItem("users", JSON.stringify(existingUsers));
+        Swal.fire({
+          icon: "success",
+          title: "Password Updated",
+          text: "Your password has been successfully updated.",
+          confirmButtonText: "OK",
+        }).then(() => {
+          emailInputEditPassword.value = "";
+          passwordInputEditPassword.value = "";
+          confirmpasswordInputEditPassword.value = "";
+          window.location.href = "index.html"; // الانتقال إلى صفحة تسجيل الدخول
+        });
       }
-  }
+    }
   });
 }
-
 
 // ***************** logic sweet alert  ***********************************
 
@@ -709,6 +722,7 @@ window.addEventListener("offline", function () {
 window.addEventListener("online", function () {
   startTimer(currentDuration);
   submitanswer.disabled = false;
+  submitanswer.style.backgroundColor = "";
 });
 
 //*********************  if user click on retry button will move to category cards ********************
@@ -718,7 +732,3 @@ if (retrybtn) {
     window.location.href = "category_cards.html";
   });
 }
-
-
-
-
