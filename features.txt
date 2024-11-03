@@ -1,0 +1,30 @@
+Features of the Quiz App Project:-
+
+1. **User Authentication**:
+   - Sign In Page: Allows users to enter their credentials (email, password) to access the quiz app .
+   - Sign Up Page: New users can create an account by providing necessary information (name, email, password).
+   - Forgot Password Page: Users can reset their password if they forget it.
+
+2. **Categories Page**:
+   - Displays three categories for quizzes.
+   - Clicking on a category shows instructions for that category.
+   - after shows instructions, user redirect to quiz page that conatin the questions according category.
+
+3. **Quiz Functionality**:
+   - The quiz page presents a set of questions based on the selected category.
+   - Each quiz includes:
+     - Number of questions.
+     - Progress bar to show the user's progress through the quiz.
+     - Category name displayed at the top.
+     - Timer to limit the time for answering questions.
+
+4. **Timer Functionality**:
+   - The timer counts down during the quiz.
+   - If the timer ends before the user finishes, they are redirected to the results page.
+   - If the internet connection is lost, the timer will stop, and the user will not be able to navigate to the next question.
+         Once the internet connection is restored,the timer will resume from where it left off, 
+         allowing the user to continue answering the questions.
+
+5. **Results Page**:
+   - Displays the user's score after completing the quiz.
+   - Provides feedback on performance .
