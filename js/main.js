@@ -297,14 +297,13 @@ if (sign_up_form) {
 const loggedInUserEmail = localStorage.getItem("loggedInUserEmail");
 const savedUsers = JSON.parse(localStorage.getItem("users")) || [];
 const currentUser = savedUsers.find((user) => user.email === loggedInUserEmail);
-const allowedPages = ["/category_cards.html", "/score.html", "/quize.html"];
 
-if (currentUser && allowedPages.includes(window.location.pathname)) {
+if (currentUser) {
   if (profileImageHeader) {
     profileImageHeader.src = currentUser.profileImage || defaultProfileImage;
     profileImageHeader.addEventListener("click", function () {
       const profileContainer = this.closest(".profile-container");
-      profileContainer.classList.toggle("active"); // يبدل بين عرض وإخفاء div
+      profileContainer.classList.toggle("active"); 
       if (userNameinfo) {
         userNameinfo.textContent = currentUser.name;
       }
@@ -313,19 +312,19 @@ if (currentUser && allowedPages.includes(window.location.pathname)) {
       }
     });
   }
-  if (name_user) {
-    name_user.textContent = currentUser.name;
-  }
-  if (smallprofileNameHeader) {
-    smallprofileNameHeader.textContent = currentUser.name;
-  }
-} else {
+ 
+ } else {
   console.log("User not found.");
   if (profileImageHeader) {
     profileImageHeader.src = defaultProfileImage;
   }
 }
-
+ if (name_user) {
+    name_user.textContent = currentUser.name;
+  }
+ if (smallprofileNameHeader) {
+    smallprofileNameHeader.textContent = currentUser.name;
+  }
 if (logoutBtn) {
   logoutBtn.addEventListener("click", function () {
     window.location.href = "index.html";
